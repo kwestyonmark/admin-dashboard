@@ -7,6 +7,7 @@ html {
     font-family: 'Inter', sans-serif;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 div {
     /* border: 1px dashed black; */
@@ -16,7 +17,6 @@ div {
     width: 100%;
     display: grid;
     grid-template-columns: 200px 1fr ;
-    /* grid-template-rows: min-content; */
     background-color: gray;
 }
 .navbar {
@@ -24,7 +24,6 @@ div {
     width: fit-content;
     grid-template-columns: 45px 100px;
     grid-template-rows: 1fr;
-    
     gap: 6px;
 }
 .settings {
@@ -35,16 +34,27 @@ div {
     gap: 6px;
     padding-top: 3rem;
 }
+.icons:hover {
+    cursor: pointer;
+}
 .icons,
 .text {
+    justify-content: start;
     display: grid;
     grid-template-rows: 80px;
     grid-auto-rows: 30px;
+    gap: 1rem;
+
+}
+.s-icons {
+    justify-content: end;
 }
 .s-icons,
 .s-text {
+    padding-right: 4px;
     display: grid;
     grid-auto-rows: 30px;
+    gap: 1rem;
 }
 .Dashboard,
 #dash{
@@ -59,38 +69,187 @@ img {
 }
 
 .dashboard {
-    background-color: blue;
+    background-color: #318bf8;
     grid-column: 1/3;
     grid-row: 1;
     padding: 1rem;
-    height: 100vh;
 }
 .main {
     padding-bottom: 2rem;
     width: auto;
-    background-color: rgba(255, 255, 255, .80);
+    background-color: rgb(210, 210, 214);
     grid-column: 2/3;
     grid-row: 1/2 ;
     display: grid;
-    grid-template-rows: 1fr 3fr;
+    /* grid-template-rows: 1fr 3fr; */
 }
 .header {
-    /* height: 100px; */
-    background-color: red;
+    background-color: ghostwhite;
     grid-row: 1/2;
     grid-column: 1/2;
+    display: grid;
+    height: fit-content;
+    padding-bottom: 1rem;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 0%;
+}
+input[type= "search"] {
+    width: 80%;
+    outline: none;
+    border: none;
+    height: 25px;
+    border-radius: 30px;
+    background-color: gainsboro;
+    padding-left: 1rem;
+}
+.profile {
+    display: flex;
+    align-items: start;
+    padding: 1rem;
+    padding-right: 3rem;
+    justify-content: end;
+    gap: 2rem;
+}
+#profile-name {
+    font-size: large;
+    font-weight: 550;
+}
+.profile #boko {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    transform: scale(200%);
+    border-radius: 100px;
+}
+.name #boko {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    transform: scale(300%);
+    border-radius: 100px;
+}
+.name {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    font-size: large;
+    font-weight: bold;
+    padding-left: 3rem;
+    align-items: center;
+}
+span {
+    font-size: small;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    align-self: center;
+    height: 30px;
+    justify-content: center;
+    gap: 1rem;
+}
+button {
+    width: 80px;
+    background-color: #318bf8;
+    border: none;
+    border-radius: 20px;
+}
+button:hover {
+    color: ghostwhite;
+    cursor: pointer;
+}
+.Dashboard:hover {
+    color: ghostwhite;
+    cursor: pointer;
 }
 .body {
     padding-right: 1rem;
-    background-color: rgba(255, 255, 255, .80);
+    /* background-color: rgb(210, 210, 214); */
     grid-column: 1/1;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 .content {
-    background-color: green;
-    grid-row: 1;
+    /* background-color: green; */
+    /* grid-row: 1; */
+    display: grid;
+    /* gap: 10px; */
+    grid-template-rows: 4ch 1fr;
+    justify-content: start;
+}
+.projects {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 2fr);
+    display: grid;
+    gap: 15px;
+    padding-left: 1rem;
+}
+p {
+    grid-column: 1/3;
+    align-self:center;
+    padding-left: 1rem ;
+    font-weight: 600;
+}
+.divs div {
+    font-weight: bold;
+    font-size: medium;
+}
+.projects .divs,
+.dummy {
+    background-color: ghostwhite;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    font-size: small;
+}
+.projects .divs {
+    box-shadow: -5px 0 1px orange;
+}
+.dummy {
+    padding-left: 0%;
+    padding-top: 0%;
+}
+#icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex: 1;
+    gap: 1rem;
 }
 .right-panel {
-    background-color: purple;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.box {
+    display: grid;
+    grid-template-rows: 4ch 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.contents {
+    background-color: ghostwhite;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    padding: 1rem;
+    justify-content: start;
+    border-radius: 5px;
+}
+.trending .box .contents {
+    grid-template-rows: repeat(4, 1fr);
+}
+#title {
+    font-weight: 600;
 }
