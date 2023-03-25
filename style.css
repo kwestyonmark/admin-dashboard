@@ -9,9 +9,6 @@ html {
     width: 100vw;
     overflow-x: hidden;
 }
-div {
-    /* border: 1px dashed black; */
-}
 .container {
     height: 100%;
     width: 100%;
